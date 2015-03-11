@@ -22,3 +22,8 @@ iron:router@1.0.0
 yasinuslu:blaze-meta
 aldeed:collection2
 aldeed:autoform
+accounts-facebook
+materialize:materialize
+service-configuration
+fortawesome:fontawesome
+sergeyt:typeahead

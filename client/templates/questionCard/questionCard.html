@@ -1,0 +1,42 @@
+<template name="questionCard">
+  <input type="hidden" value="{{_id}}" id="questionId"/>
+  <div class="card small">
+    <div class="card-content">
+      <span class="card-title grey-text text-darken-4">
+        Question
+        <!-- <i class="mdi-navigation-more-vert right"></i>
+      -->
+      {{#if currentUser}}
+      <a class="btn-floating waves-effect waves-light red right activator"> <i class="mdi-content-add"></i>
+      </a>
+      {{else}}
+      <a class="btn-floating right disabled">
+        <i class="mdi-content-add"></i>
+      </a>
+      {{/if}}
+    </span>
+    <p>{{description}}</p>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">
+      Answer
+      <i class="mdi-navigation-close right"></i>
+    </span>
+    <p>{{description}}</p>
+
+    <form role="form" id ="answer">
+      <div class="input-field col s6">
+        <input id="myAnswer" class="form-control typeahead" name="person" type="text" placeholder="Name" autocomplete="off" spellcheck="off" data-source="names"/>
+      </div>
+
+      <button class="btn waves-effect btn-small waves-light" type="submit" name="action">
+        Submit
+        <i class="mdi-content-send right"></i>
+
+      </button>
+    </form>
+  </div>
+</div>
+</template>
+
+<template name="revealCard"></template>

@@ -1,11 +1,10 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  waitOn: function() {
+    return[this.subscribe('Questions'), this.subscribe('Answers'),this.subscribe('userdata')];
+  }
 });
 
-Router.route('/dashboard', {
-  name: 'dashboard'
-});
-
-Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
+Router.route('/newQuestion', {
+    name: 'newQuestion'
 });
